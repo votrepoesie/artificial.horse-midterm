@@ -8,6 +8,9 @@
 </head>
 <body>
     <p id="typo"><span>↓ understood despite embarassing typo</span></p>
+    <p id="what-is-ugly">visual disruption and disorientation <br> <span>adds to ugliness →</span></p>
+    <a id="pretty-title">"Pretty"</a>
+    <p id="pretty-para">circular shape is symmetrical <br> nice & seamless gradient <br> animation is engaging ↓</p>
     <div class="shape1"><a>"interesting"</a></div>  
     <div class="shape2"><a>"interesting"</a></div>
     <div class="shape3"><a>"interesting"</a></div>
@@ -33,6 +36,21 @@
     top: 90px;
 }
 
+#what-is-ugly {
+    color: white;
+    position: absolute;
+    left: 980px;
+    top: 700px;
+    text-align: right;
+}
+
+#pretty-para {
+    color: white;
+    position: absolute;
+    left: 470px;
+    top: 310px;
+}
+
 span {
     color: #ff9b71;
 }
@@ -41,6 +59,13 @@ a {
     color: white;
     position: relative;
     top: 70px;
+}
+
+#pretty-title {
+    position: absolute;
+    top: 700px;
+    left: 500px;
+    font-size: 30px;
 }
 
 #ugly-para {
@@ -221,7 +246,7 @@ img {
   background-image: linear-gradient(to bottom right, #7f7fd5, #86a8e7, #91eae4);
   box-shadow: 0 0 0 10px #91eae4;
   position: absolute;
-  /* overflow: hidden; */
+  overflow: hidden;
   left: 500px;
   top: 500px;
 }
@@ -236,7 +261,7 @@ img {
   left: 0;
   transform: skewX(-45deg) translateX(-150%);
   z-index: -1;
-  animation: pulse 3s linear infinite;
+  animation: pulse 1.5s linear infinite;
 }
 
 @keyframes pulse {
