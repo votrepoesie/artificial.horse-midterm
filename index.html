@@ -4,26 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>~Chat GPT~ draws a bunch of shapes</title>
+    <title>ChatGPT thinks of beauty</title>
 </head>
 <body>
-  <div class="shape1"><a>"interesting"</a></div>  
-  <div class="shape2"><a>"interesting"</a></div>
-  <div class="shape3"><a>"interesting"</a></div>
-  <div class="shape4"><a id="interesting">"interesting"</a></div>
-  <div class="shape5"><a id="pretty">"pretty"</a></div>
-  <div class="shape6">
-    <a id="ugly">"ugly"</a>
-    <p>
-        What is ugly for AI? <br><br>
-        something visually unappealing <br><br>
-        elements that clash to create awkwardness and confusion <br><br>
-        <span>personally I don't think this design is ugly</span>
+    <p id="typo"><span>↓ understood despite embarassing typo</span></p>
+    <div class="shape1"><a>"interesting"</a></div>  
+    <div class="shape2"><a>"interesting"</a></div>
+    <div class="shape3"><a>"interesting"</a></div>
+    <div class="shape4"><a id="interesting">"interesting"</a></div>
+    <div class="shape5"><a id="pretty">"pretty"</a></div>
+    <div class="shape6">
+        <a id="ugly">"ugly"</a>
+        <p id="ugly-para">
+            What is ugly for AI? <br><br>
+            something visually unappealing <br><br>
+            elements that clash to create awkwardness and confusion <br><br>
+            <span>personally I don't think this design is ugly</span>
 </div>
   <img src="screenshot.png" alt="a screenshot of my question for Chat GPT">
 </body>
 
 <style>
+
+#typo {
+    position: absolute;
+    left: 500px;
+    top: 90px;
+}
 
 span {
     color: #ff9b71;
@@ -35,7 +42,7 @@ a {
     top: 70px;
 }
 
-p {
+#ugly-para {
     color: white;
     position: relative;
     top: 120px;
@@ -285,8 +292,6 @@ and create an overall sense of awkwardness and confusion */
   transform: translate(-50%, -50%) rotate(-45deg);
   z-index: -1;
 }
-
-
 
 </style>
 </html>
