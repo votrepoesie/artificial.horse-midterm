@@ -20,6 +20,7 @@
             something visually unappealing <br><br>
             elements that clash to create awkwardness and confusion <br><br>
             <span>personally I don't think this design is ugly</span>
+    <div class="shape7"></div>
 </div>
   <img src="screenshot.png" alt="a screenshot of my question for Chat GPT">
 </body>
@@ -47,7 +48,7 @@ a {
     position: relative;
     top: 120px;
     left: 8px;
-    font-size: 10px;
+    font-size: 8px;
 }
 
 #interesting {
@@ -291,6 +292,54 @@ and create an overall sense of awkwardness and confusion */
   left: 50%;
   transform: translate(-50%, -50%) rotate(-45deg);
   z-index: -1;
+}
+
+/* shape 7 */
+
+.shape7 {
+    width: 100px;
+    height: 100px;
+    background-color: #bada55;
+    position: absolute;
+    top: 260px;
+    overflow: hidden;
+    transform: scale(1);
+}
+
+.shape7::before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    box-shadow: 0 0 0 10px #bada55;
+    z-index: -1;
+}
+
+.shape7::after {
+    content: "";
+    width: 150%;
+    height: 10px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    z-index: -1;
+    animation: move 2s ease-in-out infinite alternate;
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(-10px) rotate(-45deg);
+    }
+    100% {
+        transform: translateX(10px) rotate(-45deg);
+    }
 }
 
 </style>
