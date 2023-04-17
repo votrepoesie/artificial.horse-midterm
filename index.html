@@ -10,19 +10,52 @@
   <div class="shape1"><a>"interesting"</a></div>  
   <div class="shape2"><a>"interesting"</a></div>
   <div class="shape3"><a>"interesting"</a></div>
-  <div class="shape4"><a>"interesting"</a></div>
-  <div class="shape5"><a>"pretty</a></div>
-  <div class="shape6"><a>"ugly"</a></div>
+  <div class="shape4"><a id="interesting">"interesting"</a></div>
+  <div class="shape5"><a id="pretty">"pretty"</a></div>
+  <div class="shape6">
+    <a id="ugly">"ugly"</a>
+    <p>
+        What is ugly for AI? <br><br>
+        something visually unappealing <br><br>
+        elements that clash to create awkwardness and confusion <br><br>
+        <span>personally I don't think this design is ugly</span>
+</div>
   <img src="screenshot.png" alt="a screenshot of my question for Chat GPT">
 </body>
 
 <style>
 
+span {
+    color: #ff9b71;
+}
+
 a {
     color: white;
-    position: absolute;
+    position: relative;
     top: 70px;
+}
 
+p {
+    color: white;
+    position: relative;
+    top: 120px;
+    left: 8px;
+    font-size: 10px;
+}
+
+#interesting {
+    top: 120px;
+    left: 10px;
+}
+
+#pretty {
+    top: 120px;
+    left: 25px;
+}
+
+#ugly {
+    top: 110px;
+    left: 25px;
 }
 
 body{
@@ -41,6 +74,9 @@ img {
 }
 
 .shape1 {
+    position: relative;
+    left: 10px;
+    top: 30px;
     width: 0;
     height: 0;
     border-top: 50px solid red;
@@ -178,7 +214,7 @@ img {
   background-image: linear-gradient(to bottom right, #7f7fd5, #86a8e7, #91eae4);
   box-shadow: 0 0 0 10px #91eae4;
   position: absolute;
-  overflow: hidden;
+  /* overflow: hidden; */
   left: 500px;
   top: 500px;
 }
@@ -193,7 +229,7 @@ img {
   left: 0;
   transform: skewX(-45deg) translateX(-150%);
   z-index: -1;
-  animation: pulse 2s linear infinite;
+  animation: pulse 3s linear infinite;
 }
 
 @keyframes pulse {
@@ -222,7 +258,7 @@ and create an overall sense of awkwardness and confusion */
   background-color: #ff9b71;
   position: absolute;
   left: 1300px;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .shape6::before {
