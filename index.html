@@ -7,13 +7,27 @@
     <title>ChatGPT thinks of beauty</title>
 </head>
 <body>
+    <div class="bubble"></div>
+    <a id="perfect">"perfect"</a>
+    <p id="perfect-para">
+        simple yet captivating ↑<br><br>
+        perfect example of a beautiful <br>
+        and enjoyable CSS graphic <br><br>
+        showcases the power of simple <br>
+        yet effective design elements</p>
     <p id="typo"><span>↓ understood despite embarassing typo</span></p>
     <p id="what-is-ugly">visual disruption and disorientation <br> <span>adds to ugliness →</span></p>
-    <a id="pretty-title">"Pretty"</a>
-    <p id="pretty-para">circular shape is symmetrical <br> nice & seamless gradient <br> animation is engaging ↓</p>
+    <a id="pretty-title">"pretty"</a>
+    <p id="pretty-para">circular shape is <span>symmetrical</span> <br> nice & seamless gradient <br> animation is engaging ↓</p>
     <div class="shape1"><a>"interesting"</a></div>  
     <div class="shape2"><a>"interesting"</a></div>
     <div class="shape3"><a>"interesting"</a></div>
+    <p id="interesting-para">
+        demonstrates the power and flexibility of CSS <br>
+        as a tool for creating visually interesting and <br>
+        engaging designs on the web <br><br>
+        <span>personally I think these are ugly...</span>
+    </p>
     <div class="shape4"><a id="interesting">"interesting"</a></div>
     <div class="shape5"><a id="pretty">"pretty"</a></div>
     <div class="shape6">
@@ -29,6 +43,62 @@
 </body>
 
 <style>
+
+#interesting-para {
+    color: white;
+    position: absolute;
+    left: 50px;
+    top: 700px;
+}
+
+#perfect {
+    color: white;
+    position: absolute;
+    font-size: 30px;
+    left: 740px;
+    top: 480px;
+}
+
+#perfect-para {
+    color: white;
+    position: absolute;
+    top: 520px;
+    left: 720px;
+}
+
+.bubble {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-image: radial-gradient(circle at 50px 50px, #fa709a, #fee140);
+    position: absolute;
+    cursor: pointer;
+    left: 750px;
+    top: 300px;
+}
+
+.bubble::after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.bubble:hover::after {
+    opacity: 1;
+    top: 50%;
+    left: 50%;
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%) scale(3);
+}
+
 
 #typo {
     position: absolute;
